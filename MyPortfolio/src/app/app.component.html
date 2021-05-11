@@ -11,7 +11,7 @@
 <title>MyPortfolio</title>
 </head>
 <body>
-{{ formName.value | json }}
+{{ items | json }}
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
@@ -30,22 +30,19 @@
 
     <div class="col-md-6">
       <form class="row gx-3 gy-2 align-items-center"
-      #formName="ngForm">
+      #formName="ngForm" novalidate (ngSubmit)="addItem()">
       <label for="placeName" class="form-label">Name of destination</label>
-      <input type="text" name="placeName" id="placeName" class="form-control" #placeName="ngModel" ngModel>
+      <input type="text" name="placeName" id="placeName" class="form-control" #placeName="ngModel" ngModel [(ngModel)]="item.placeName" >
       <br>
         <label for="plan" class="form-label">Plan description</label>
-        <input type="text" name="plan" id="plan" class="form-control" #plan="ngModel" ngModel>
+        <input type="text" name="plan" id="plan" class="form-control" #plan="ngModel" ngModel [(ngModel)]="item.plan">
         <br>
           <label for="date" class="form-label">Date of planned arrival</label>
-          <input type="date" name="date" id="date" class="form-control" #date="ngModel" ngModel>
-          <button type="button" name="save">Save</button>
+          <input type="date" name="date" id="date" class="form-control" #date="ngModel" ngModel [(ngModel)]="item.date">
+          <button type="submit" name="save">Save</button>
           <button type="button" name="delete">Delete</button>
           <button type="button" name="edit">Edit</button>
         </form>
-        <!-- Next Steps -->
-        <h2>Next Steps</h2>
-        <p>What do you want to do next with your app?</p>
 
         <input type="hidden" #selection>
 
