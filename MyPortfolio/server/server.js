@@ -1,18 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const cors = require("cors");
-
-let corsOptions = {
-  origin: "http://localhost:8081"
-};
-
-app.use(cors(corsOptions));
+const cors = require('cors');
 // set port, listen for requests
 const PORT = 9001;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}) );
+app.use(cors());
 
 app.all("/*", function(req, res, next){
   res.header('Access-Control-Allow-Origin', '*');
@@ -21,7 +16,7 @@ app.all("/*", function(req, res, next){
   next();
 });
 
-let items=[{placeName:'Scandinavia', plan:'Ship course' , date:new Date('01-06-2023')}];
+let items=[{placeName:'', plan:'' , date:new Date('mm-dd-yyyy')}];
 
 
 app.get("/", (request, response) => {
@@ -32,12 +27,12 @@ app.post('/', function (request, response) {
 });
 
 
-app.get('/items', function (request, response) {
+app.get("/items", function (request, response) {
   response.send(items);
 });
-app.post('/addItems', function (request, response) {
+app.post('/addItem', function (request, response) {
   items.push(request.body);
   response.status(200).send(items);
 });
-
+console.log(items);
 app.listen(PORT, function () {});

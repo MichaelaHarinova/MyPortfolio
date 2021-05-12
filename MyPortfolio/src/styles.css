@@ -1,8 +1,7 @@
-
 /* Responsive Styles */
 @media screen and (max-width: 767px) {
 
-  .card-container > *:not(.circle-link) ,
+  .card-container > *:not(.circle-link),
   .terminal {
     width: 100%;
   }
@@ -29,12 +28,69 @@
   }
 }
 
-.weather{
-  background: rgba(0,0,0,0.6);
-  width: 200px;
+body {
+  top: 0;
+  left: 0;
+  margin: auto;
+}
+
+
+.bodyBasic {
+  background: rgba(0, 0, 0, 0.3);
+  position: relative;
+  height: 100vh;
+  padding: 100px 200px;
+}
+
+.weather {
+  background: rgba(0, 0, 0, 0.3);
+  width: 600px;
   height: 200px;
 }
 
-.toolbar{
-  background: rgba(0,0,0,0.6);
+.toolbar {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.plan {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.blurred-box {
+  position: relative;
+  width: 450px;
+  height: 350px;
+  /* top: calc(50% - 175px);
+   left: calc(50% - 125px);*/
+  background: inherit;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+/* parallax */
+.parallax {
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.universe {
+  background: url('img/universe.png') no-repeat;
+  background-size: cover;
+  z-index: 1;
+
+}
+
+.planet {
+  background: url('img/planet.png') no-repeat;
+  z-index: 2;
+  background-size: contain;
+}
+
+.surface {
+  background: url('img/surface.png') no-repeat;
+  z-index: 3;
+  background-size: contain;
 }

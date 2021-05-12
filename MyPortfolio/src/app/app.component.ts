@@ -20,7 +20,7 @@ export class AppComponent implements OnInit{
 
   item = new Item('', '', new Date(''));
 
-  addItem(): void {
+  onSubmit(): void {
     this.addItemService.addItem(this.item).subscribe
     (data => this.getRequest('http://localhost:9001/items').then(res => console.log(this.items)), error => console.error(error));
   }
