@@ -2,6 +2,7 @@ import {Component, ElementRef, HostListener, ViewChild} from '@angular/core';
 import {Item} from './Item';
 import {AddItemService} from './add-item.service';
 import {OnInit} from '@angular/core';
+import { NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-root',
@@ -9,16 +10,34 @@ import {OnInit} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 
+
 export class AppComponent implements OnInit {
   title = 'MyPortfolio';
   public items = [{name: null, content: null, date: null}];
 
   item = new Item('', '', new Date(''));
-  // parallax
-  IniTop = 0;
-  parallaxRatio = 1;
 
-/*  @ViewChild('parallax') parallax!: ElementRef;
+  @ViewChild('carousel', {static: true})
+  carousel!: NgbCarousel;
+  // tslint:disable-next-line:typedef
+  prevSlide() {
+    this.carousel.prev();
+  }
+
+  // tslint:disable-next-line:typedef
+  nextSlide() {
+    this.carousel.next();
+  }
+
+  // tslint:disable-next-line:typedef
+  stopSlider() {
+    this.carousel.pause();
+  }
+  // parallax
+ // IniTop = 0;
+ // parallaxRatio = 1;
+/*
+ @ViewChild('parallax') parallax!: ElementRef;
   @HostListener('window: scroll', ['$event'])
   // tslint:disable-next-line:typedef
   onWindowScroll(event: any) {
