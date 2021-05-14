@@ -1,11 +1,11 @@
 export class Item {
   constructor(
-    public placeName: string,
-    public plan: string,
+    public name: string,
+    public content: string,
     public date: Date,
   ) {
-    this.placeName = placeName;
-    this.plan = plan;
+    this.name = name;
+    this.content = content;
     this.date = new Date();
   }
 

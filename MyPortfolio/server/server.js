@@ -16,7 +16,7 @@ app.all("/*", function(req, res, next){
   next();
 });
 
-let items=[{placeName:'', plan:'' , date:new Date('mm-dd-yyyy')}];
+let items=[{name:'', content:'' , date:new Date('mm-dd-yyyy')}];
 
 
 app.get("/", (request, response) => {

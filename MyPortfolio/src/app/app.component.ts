@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Item } from './Item';
+import {Component, ElementRef, HostListener, ViewChild} from '@angular/core';
+import {Item} from './Item';
 import {AddItemService} from './add-item.service';
 import {OnInit} from '@angular/core';
 
@@ -9,17 +9,28 @@ import {OnInit} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
+  title = 'MyPortfolio';
+  public items = [{name: null, content: null, date: null}];
+
+  item = new Item('', '', new Date(''));
+  // parallax
+  IniTop = 0;
+  parallaxRatio = 1;
+
+/*  @ViewChild('parallax') parallax!: ElementRef;
+  @HostListener('window: scroll', ['$event'])
+  // tslint:disable-next-line:typedef
+  onWindowScroll(event: any) {
+    // tslint:disable-next-line:no-unused-expression
+    this.parallax.nativeElement.style.top(this.IniTop - (window.scrollY * this.parallaxRatio)) + 'px';
+  }*/
+  // form
   constructor(
     private addItemService: AddItemService,
   ) {
     this.addItemService = addItemService;
   }
-  title = 'MyPortfolio';
-  public items = [{placeName: null, plan: null, date: null}];
-
-  item = new Item('', '', new Date(''));
-
   onSubmit(): void {
     this.addItemService.addItem(this.item).subscribe
     (data => this.getRequest('http://localhost:9001/items').then(res => console.log(this.items)), error => console.error(error));
@@ -34,6 +45,7 @@ export class AppComponent implements OnInit{
       }
     }).then(res => res.json()).then(data => this.items = data);
   }
+
   // tslint:disable-next-line:use-lifecycle-interface
   ngOnInit(): any {
     this.getRequest('http://localhost:9001/items').then(res => console.log(this.items));
