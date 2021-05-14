@@ -130,22 +130,20 @@
       <h2>What do people say about my work?</h2>
     </div>
 
-    <div *ngIf="item || items.length > 0">
-      <!--   <div *ngIf='items == null'>  </div> -->
-      <div *ngFor="let item of items" class="card translucent-box ">
-        <div class="card-header">
-          <div>{{ item.date }}</div>
-          <div class="content">{{ item.name }}</div>
-        </div>
-        <div class="card-body">
-          <div class="content">{{ item.content }}</div>
-          <!--   <button class="btn btn-outline-danger" type="button" name="delete">Delete</button>
-               <button class="btn btn-outline-secondary" type="button" name="edit">Edit</button> -->
-        </div>
+    <div *ngFor="let item of items | slice:1; let i = index" class="card translucent-box ">
+      <div class="card-header">
+        <div>{{ item.date }}</div>
+        <div class="content">{{ item.name }}</div>
+      </div>
+      <div class="card-body">
+        <div class="content">{{ item.content }}</div>
+        <!--   <button class="btn btn-outline-danger" type="button" name="delete">Delete</button>
+             <button class="btn btn-outline-secondary" type="button" name="edit">Edit</button> -->
       </div>
     </div>
   </div>
 </div>
+
 <!-- <div class="bodyAbs parallax"></div> -->
 
 <!-- Footer -->
