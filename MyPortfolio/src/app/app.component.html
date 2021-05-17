@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -20,10 +21,9 @@
   <title>MyPortfolio</title>
 </head>
 <body>
-<div class="parallax" #parallax id="parallax">
-
+<div class="parallax">
   <div class=" universe"></div>
-  <div class=" planet"></div>
+  <div class=" planet "></div>
   <div class=" surface"></div>
 </div>
 <!-- About -->
@@ -36,7 +36,7 @@
     <p>This websites will show you my skills in action.
       So please go ahead and discover the functionality and design!</p>
   </div>
-  <div class="surfaceTop"><img src="assets/s.png"></div>
+  <div class="surfaceTop"><img class="parallaxSurface" src="assets/sur.png" alt="Planet Surface"></div>
   <div class="opaque-box">
 
     <!-- github carousel -->
@@ -120,25 +120,32 @@
 
       <div class="text-center">
         <!--  <button class="btnCar" (click)="prevSlide()">Prev</button>
-         <button class="btnCar" (click)="nextSlide()">Next</button> -->
-        <button class="btnCar" (click)="stopSlider()">Stop</button>
+         <button class="btnCar" (click)="nextSlide()">Next</button>
+        <button class="btnCar" (click)="stopSlider()">Stop</button>-->
       </div>
     </div>
-
+    <!-- floating planets -->
+    <div appParallax class="planet1" id="planet1"></div>
+    <div appParallax class="planet4" id="planet4"></div>
+    <div appParallax class="planet2" id="planet2"></div>
+    <div appParallax class="planet3" id="planet3"></div>
     <!-- Reviews from people -->
-    <div class="form translucent-box text-center bodyAbs">
+    <div class="form translucent-box text-center">
       <h2>What do people say about my work?</h2>
     </div>
-
-    <div *ngFor="let item of items | slice:1; let i = index" class="card translucent-box ">
-      <div class="card-header">
-        <div>{{ item.date }}</div>
-        <div class="content">{{ item.name }}</div>
-      </div>
-      <div class="card-body">
-        <div class="content">{{ item.content }}</div>
-        <!--   <button class="btn btn-outline-danger" type="button" name="delete">Delete</button>
-             <button class="btn btn-outline-secondary" type="button" name="edit">Edit</button> -->
+    <div class="card-group group">
+      <div *ngFor="let item of items | slice:1; let i = index">
+        <div class="card translucent-box">
+          <div class="card-header">
+            <div>{{ item.date }}</div>
+            <div class="content">{{ item.name }}</div>
+          </div>
+          <div class="card-body">
+            <div class="content">{{ item.content }}</div>
+            <!--   <button class="btn btn-outline-danger" type="button" name="delete">Delete</button>
+                 <button class="btn btn-outline-secondary" type="button" name="edit">Edit</button> -->
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -179,14 +186,19 @@
       </form>
     </div>
   </div>
+
   <!-- Copyright -->
-  <div class="footer-copyright text-center footerAbs">Created with<img class="ang"
-                                                                       alt="Angular Logo"
-                                                                       src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
-  /> © 2021 Copyright Michaela Harinova
+  <div class="footer-copyright text-center footerAbs">Created with<img class="ang" alt="Angular Logo"
+                                                                       src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="/>
+    © 2021 Copyright Michaela Harinova <a href="https://www.linkedin.com/in/michaela-hari%C5%88ov%C3%A1-a0a7131b8/"
+                                          class="fa">
+      <img alt="Michaela Harinova| LinkedIn" width="35px"
+           src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/>
+    </a>
+    <a target="_blank" href="mailto:michaelaharin@gmail.com" class="fa">
+      <img alt="Gmail" width="35px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/gmail.svg"/>
+    </a>
   </div>
 </footer>
-
-
 <router-outlet></router-outlet>
 </body>

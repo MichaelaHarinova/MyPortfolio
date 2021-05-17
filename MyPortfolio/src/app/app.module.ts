@@ -7,10 +7,12 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ParallaxDirective } from './parallax.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ParallaxDirective,
   ],
   imports: [
     BrowserModule,

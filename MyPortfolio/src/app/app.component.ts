@@ -2,7 +2,7 @@ import {Component, ElementRef, HostListener, ViewChild} from '@angular/core';
 import {Item} from './Item';
 import {AddItemService} from './add-item.service';
 import {OnInit} from '@angular/core';
-import { NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
+import {NgbCarousel} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-root',
@@ -13,12 +13,23 @@ import { NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
 
 export class AppComponent implements OnInit {
   title = 'MyPortfolio';
+
+  IniTop = 0;
+  parallaxRatio = 1;
+
   public items = [{name: null, content: null, date: null}];
 
   item = new Item('', '', new Date(''));
 
-  @ViewChild('carousel', {static: true})
-  carousel!: NgbCarousel;
+  @ViewChild('carousel') carousel!: NgbCarousel;
+  @ViewChild('parallax') parallax!: ElementRef;
+  @ViewChild('planet') planet!: ElementRef;
+  @HostListener('window: scroll', ['$event'])
+  // tslint:disable-next-line:typedef
+  onWindowScroll(event: any) {
+  this.parallax.nativeElement.style.top(this.IniTop - (window.scrollY * this.parallaxRatio)) + 'px';
+  this.planet.nativeElement.style.top(this.IniTop - (window.scrollY * this.parallaxRatio)) + 'px';
+ }
   // tslint:disable-next-line:typedef
   prevSlide() {
     this.carousel.prev();
@@ -33,23 +44,16 @@ export class AppComponent implements OnInit {
   stopSlider() {
     this.carousel.pause();
   }
-  // parallax
- // IniTop = 0;
- // parallaxRatio = 1;
-/*
- @ViewChild('parallax') parallax!: ElementRef;
-  @HostListener('window: scroll', ['$event'])
-  // tslint:disable-next-line:typedef
-  onWindowScroll(event: any) {
-    // tslint:disable-next-line:no-unused-expression
-    this.parallax.nativeElement.style.top(this.IniTop - (window.scrollY * this.parallaxRatio)) + 'px';
-  }*/
+
+
+
   // form
   constructor(
     private addItemService: AddItemService,
   ) {
     this.addItemService = addItemService;
   }
+
   onSubmit(): void {
     this.addItemService.addItem(this.item).subscribe
     (data => this.getRequest('http://localhost:9001/items').then(res => console.log(this.items)), error => console.error(error));

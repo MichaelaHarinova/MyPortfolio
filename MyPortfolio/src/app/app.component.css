@@ -55,8 +55,6 @@ body {
 
 .translucent-box {
   position: relative;
-  width: 80%;
-  left: 10%;
   background: #0000006e;
   border-radius: 5px;
   overflow: hidden;
@@ -88,6 +86,17 @@ img.ang {
 .footerAbs{
   margin-top: 20px;
 }
+/* social media */
+/* Style all font awesome icons */
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa{
+  padding:10px;
+}
+
 
 /* cards */
 .card-body {
@@ -99,12 +108,18 @@ img.ang {
   background: rgba(0, 0, 0, 0.8);
 }
 
+.group{
+  margin-left: 8% !important;
+}
+
 .card {
   height: 200px;
-  margin-top: 15px;
+  margin-top: 10px;
   padding: 25px;
   background: rgba(0, 0, 0, 0.3) !important;
   color: white !important;
+  max-width: 80% ;
+  width: 380px;
 }
 
 .content {
@@ -157,10 +172,6 @@ img.ang {
   position: relative;
 }
 
-.bodyAbs {
-  margin-top: 200px;
-}
-
 
 /* carousel */
 
@@ -176,6 +187,9 @@ img.ang {
 .surfaceTop {
   position: sticky;
   z-index: 4;
+}
+.parallaxSurface{
+  width: 100%;
 }
 
 img.carousel{
@@ -213,12 +227,43 @@ a {
 
 a:hover {
   color: #cb97d7 !important;
-  font-size: 20px !important;
 }
 
 .btn {
-  box-shadow: 0px 0px 8px aliceblue;
-  background-color: transparent !important;
+  background-color: rgba(0,0,0,0.7) !important;
   border-radius: 10px !important;
   margin: 5px;
+}
+/* planet parallax*/
+.planet1{
+  background: url("../assets/planet1.png") no-repeat;
+  position: relative;
+  height: 100px;
+  background-size: contain;
+  top: 0;
+  left: 5%;
+}
+.planet2{
+  background: url("../assets/planet2.png") no-repeat;
+  position: relative;
+  height: 150px;
+  background-size: contain;
+  top: 0;
+  left: 80%;
+}
+.planet3{
+  background: url("../assets/planet3.png") no-repeat;
+  position: relative;
+  height: 200px;
+  background-size: contain;
+  top: 0;
+  left: 5%;
+}
+.planet4{
+  background: url("../assets/planet4.png") no-repeat;
+  position: relative;
+  height: 50px;
+  background-size: contain;
+  top: 0;
+  left: 80%;
 }
