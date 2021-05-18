@@ -27,8 +27,10 @@ export class AppComponent implements OnInit {
   @HostListener('window: scroll', ['$event'])
   // tslint:disable-next-line:typedef
   onWindowScroll(event: any) {
-  this.parallax.nativeElement.style.top(this.IniTop - (window.scrollY * this.parallaxRatio)) + 'px';
-  this.planet.nativeElement.style.top(this.IniTop - (window.scrollY * this.parallaxRatio)) + 'px';
+    // tslint:disable-next-line:no-unused-expression
+ this.parallax.nativeElement.style.top(this.IniTop - (window.scrollY * this.parallaxRatio)) + 'px';
+    // tslint:disable-next-line:no-unused-expression
+ this.planet.nativeElement.style.top(this.IniTop - (window.scrollY * this.parallaxRatio)) + 'px';
  }
   // tslint:disable-next-line:typedef
   prevSlide() {
@@ -44,9 +46,6 @@ export class AppComponent implements OnInit {
   stopSlider() {
     this.carousel.pause();
   }
-
-
-
   // form
   constructor(
     private addItemService: AddItemService,
