@@ -30,7 +30,8 @@
 <div class="bodyBasic">
   <div class="blurred-box-1">
     <h1 class="text-center">Welcome to {{title}}!</h1>
-    <p>I'm junior web developer and programmer based in Belgium.
+    <p>My name is <span class="myImg">Michaela Hariňová</span>, I'm junior web developer and programmer based in
+      Belgium.
       I have diverse set of skills, ranging from HTML + CSS + JavaScrip
       to Angular and all the way to PHP, Symfony and C#.</p>
     <p>This websites will show you my skills in action.
@@ -126,18 +127,19 @@
     </div>
 
     <!-- floating planets -->
-    <div appParallax  class="planet1" id="planet1"></div>
-    <div appParallax  class="planet4" id="planet4"></div>
-    <div appParallax  class="planet2" id="planet2"></div>
-    <div appParallax  class="planet3" id="planet3"></div>
-
+    <div appParallax class="planet1" id="planet1"></div>
+    <div class="planet4" id="planet4"></div>
+    <div appParallax class="planet2" id="planet2"></div>
+    <div appParallax class="planet3" id="planet3"></div>
+  </div>
+  <div class="form-box">
     <!-- Reviews from people -->
-    <div class="form translucent-box text-center">
+    <div class="form translucent-box2 text-center">
       <h2>What do people say about my work?</h2>
     </div>
     <div class="card-group group">
       <div *ngFor="let item of items | slice:1; let i = index">
-        <div class="card translucent-box">
+        <div class="card translucent-box3 scroll">
           <div class="card-header">
             <div>{{ item.date }}</div>
             <div class="content">{{ item.name }}</div>
@@ -190,16 +192,20 @@
   </div>
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center footerAbs">Created with<img class="ang" alt="Angular Logo"
-                                                                       src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="/>
-    © 2021 Copyright Michaela Harinova <a href="https://www.linkedin.com/in/michaela-hari%C5%88ov%C3%A1-a0a7131b8/"
-                                          class="fa">
-      <img alt="Michaela Harinova| LinkedIn" width="35px"
-           src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/>
-    </a>
-    <a target="_blank" href="mailto:michaelaharin@gmail.com" class="fa">
-      <img alt="Gmail" width="35px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/gmail.svg"/>
-    </a>
+  <div class="footer-copyright text-center footerAbs">
+    <div>
+      <a href="https://www.linkedin.com/in/michaela-hari%C5%88ov%C3%A1-a0a7131b8/"
+         class="fa">
+        <img alt="Michaela Harinova| LinkedIn" width="35px"
+             src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"/>
+      </a>
+      <a target="_blank" href="mailto:michaelaharin@gmail.com" class="fa">
+        <img alt="Gmail" width="35px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/gmail.svg"/>
+      </a>
+    </div>
+    Created with
+    <img class="ang" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="/>
+    © 2021 Copyright Michaela Harinova
   </div>
 </footer>
 <router-outlet></router-outlet>

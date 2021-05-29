@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   title = 'MyPortfolio';
 
   IniTop = 0;
-  parallaxRatio = 1;
+  parallaxRatio = 0.5;
 
   public items = [{name: null, content: null, date: null}];
 

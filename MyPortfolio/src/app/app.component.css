@@ -1,269 +1,302 @@
 
+@media screen and (max-width: 900px) and (min-width: 600px), (min-width: 1100px) {
 
-/* Responsive Styles */
-@media screen and (max-width: 767px) {
+  body {
+    background: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    max-width: 100%;
+  }
 
-  .card-container > *:not(.circle-link),
-  .terminal {
+  .bodyBasic {
+    background: rgb(11 26 46);
+    max-width: 100%;
+  }
+
+
+  /* parallax - background */
+  .parallax {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3) no-repeat fixed center;
+    background-size: cover;
+  }
+
+  .universe {
+    background: url('../assets/universe.png') no-repeat;
+    background-size: cover;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .planet {
+    background: url('../assets/planet.png') no-repeat;
+    z-index: 2;
+    background-size: cover;
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    left: -25%;
+    top: -10%;
+  }
+
+  .surface {
+    background: url('../assets/surface.png') no-repeat;
+    z-index: 3;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  /* header - introduction */
+  .blurred-box-1 {
+    position: relative;
+    width: 50%;
+    height: 250px;
+    left: 25%;
+    background: #0000006e;
+    border-radius: 5px;
+    overflow: hidden;
+    color: white;
+    padding: 20px;
+    margin-top: 150px;
+  }
+
+  .myImg {
+    color: #f5a8ea;
+    font-weight: bold;
+  }
+
+  .myImg:hover:after {
+    background: url(src/assets/profilePic.png) no-repeat;
+    background-size: 100%;
+    display: block;
+    content: "";
+    width: 800px;
+    height: 100%;
+    z-index: 4;
+    max-height: 100%;
+    position: fixed;
+    top: 50%;
+    left: 20%;
+  }
+
+/* main div - parallax surface */
+  .surfaceTop {
+    position: sticky;
+    z-index: 4;
+  }
+
+  .parallaxSurface {
+    width: 100%;
+  }
+  .opaque-box {
+    background-image: linear-gradient(to bottom, #030305, #040407, transparent);
+    z-index: 10;
+    position: relative;
+    height: 700px;
+  }
+
+  /* carousel */
+  .header {
+    color: #9c8696;
+  }
+
+  .text {
+    background: rgba(0, 0, 0, 0.8);
+    margin-bottom: 80px;
+    border-radius: 10px
+  }
+
+  img.carousel {
+    width: 60%;
+    height: 330px;
+    margin-left: 215px;
+    margin-top: 80px;
+    border-radius: 10px
+  }
+
+  .btnCar {
+    background-color: transparent !important;
+    border-style: none;
+    color: #9007af !important;
+    margin: 10px;
+  }
+
+  .btnCar:hover {
+    color: #cb97d7 !important;
+    font-size: 20px !important;
+  }
+  /* links carousel */
+  a {
+    color: #9007af !important;
+    font-weight: bold !important;
+  }
+
+  a:hover {
+    color: #cb97d7 !important;
+  }
+
+  .btn {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    border-radius: 10px !important;
+    margin: 5px;
+  }
+
+  /* floating planets - parallax */
+  .planet1 {
+    background: url("../assets/planet1.png") no-repeat;
+    position: relative;
+    height: 100px;
+    background-size: contain;
+    top: 0;
+    left: 5%;
+  }
+
+  .planet2 {
+    background: url("../assets/planet2.png") no-repeat;
+    position: relative;
+    height: 150px;
+    background-size: contain;
+    top: 0;
+    left: 80%;
+  }
+
+  .planet3 {
+    background: url("../assets/planet3.png") no-repeat;
+    position: relative;
+    height: 200px;
+    background-size: contain;
+    top: 0;
+    left: 5%;
+  }
+
+  .planet4 {
+    background: url("../assets/planet4.png") no-repeat;
+    position: relative;
+    height: 50px;
+    background-size: contain;
+    top: 0;
+    left: 80%;
+    z-index: 4;
+  }
+
+  /* form - header */
+  .form-box{
+    position: relative;
+  }
+  .translucent-box2 {
+    position: relative;
+    background: #0000006e;
+    border-radius: 5px;
+    overflow: hidden;
+    color: white;
+    padding: 20px;
+    top: -50%;
+  }
+
+/* form - add review */
+  .translucent-box {
+    position: relative;
+    background: #0000006e;
+    border-radius: 5px;
+    overflow: auto;
+    color: white;
+    padding: 20px;
+  }
+
+  .save {
+    margin-top: 25px !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* form - cards */
+  .card-body {
+    display: inline-block;
     width: 100%;
   }
 
-  .card:not(.highlight-card) {
-    height: 16px;
-    margin: 8px 0;
+  .card-deck {
+    background: rgba(0, 0, 0, 0.8);
   }
 
-  .card.highlight-card span {
-    margin-left: 72px;
+  .group {
+    margin-left: 8% !important;
   }
 
-  svg#rocket-smoke {
-    right: 120px;
-    transform: rotate(-5deg);
+  .card {
+    height: 200px;
+    margin-top: 10px;
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.3) !important;
+    color: white !important;
+    max-width: 80%;
+    width: 380px;
   }
-}
 
-@media screen and (max-width: 575px) {
-  svg#rocket-smoke {
-    display: none;
-    visibility: hidden;
+  .content {
+    font-weight: bolder;
+    font-size: 15px;
+    color: white;
   }
-}
 
-body {
-  background: rgba(0, 0, 0, 0.8);
-  top: 0;
-  left: 0;
-}
+  .btn {
+    margin: 10px;
+  }
+  .translucent-box3 {
+    position: relative;
+    background: #0000006e;
+    border-radius: 5px;
+    overflow: auto;
+    color: white;
+    padding: 20px;
+  }
 
-.bodyBasic {
-  background: rgb(11 26 46);
-}
+  .scroll::-webkit-scrollbar {
+    width: 12px;
+  }
+  .scroll::-webkit-scrollbar-track {
+   background-color: rgba(0, 0, 0, 0.6);
+  }
+  .scroll::-webkit-scrollbar-thumb {
+    background-color: rgb(217, 171, 236);
+    border-radius: 50px;
+  }
 
-.blurred-box-1 {
-  position: relative;
-  width: 50%;
-  height: 250px;
-  left: 25%;
-  background: #0000006e;
-  border-radius: 5px;
-  overflow: hidden;
-  color: white;
-  padding: 20px;
-  margin-top: 150px;
-}
+  /* footer */
+  footer {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    max-height: 100%;
+    color: white;
+    border-top: 2px solid #82425c;
+    margin-top: 20px;
+  }
 
-.translucent-box {
-  position: relative;
-  background: #0000006e;
-  border-radius: 5px;
-  overflow: hidden;
-  color: white;
-  padding: 20px;
-}
+  img.ang {
+    width: 40px;
+    margin: 0;
+  }
 
-/* form */
-.save {
-  margin-top: 25px !important;
-  margin-bottom:  20px !important;
-}
+  .footerAbs {
+    margin-top: 20px;
+  }
 
-/* footer */
-footer {
-  position: absolute;
-  width: 100%;
-  height: 200px;
-  color: white;
-  border-top: 2px solid #82425c;
-  margin-top: 20px;
-}
+  /* social media */
+  .fa:hover {
+   /* box-shadow: 0px 1px 8px 0px #ffffff;*/
+    box-shadow: inset 0px 1px 18px 0px #ffffff;
+  }
 
-img.ang {
-  width: 40px;
-  margin: 0;
-}
-
-.footerAbs{
-  margin-top: 20px;
-}
-/* social media */
-/* Style all font awesome icons */
-
-.fa:hover {
-  opacity: 0.7;
-}
-
-.fa{
-  padding:10px;
-}
-
-
-/* cards */
-.card-body {
-  display: inline-block;
-  width: 100%;
-}
-
-.card-deck {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.group{
-  margin-left: 8% !important;
-}
-
-.card {
-  height: 200px;
-  margin-top: 10px;
-  padding: 25px;
-  background: rgba(0, 0, 0, 0.3) !important;
-  color: white !important;
-  max-width: 80% ;
-  width: 380px;
-}
-
-.content {
-  font-weight: bolder;
-  font-size: 15px;
-  color: white;
-}
-
-.btn {
-  margin: 10px;
-}
-
-/* parallax */
-.parallax {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.3) no-repeat fixed center;
-  background-size: cover;
-}
-
-.universe {
-  background: url('../assets/universe.png') no-repeat;
-  background-size: cover;
-  z-index: 1;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.planet {
-  background: url('../assets/planet.png') no-repeat;
-  z-index: 2;
-  background-size: cover;
-  position: absolute;
-  width: 120%;
-  height: 120%;
-  left: -25%;
-  top: -10%;
-}
-
-.surface {
-  background: url('../assets/surface.png') no-repeat;
-  z-index: 3;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-
-/* carousel */
-
-.header{
-  color: #9c8696;
-}
-.text {
-  background: rgba(0, 0, 0, 0.8);
-  margin-bottom: 80px;
-  border-radius: 10px
-}
-
-.surfaceTop {
-  position: sticky;
-  z-index: 4;
-}
-.parallaxSurface{
-  width: 100%;
-}
-
-img.carousel{
-  width: 60%;
-  height: 330px;
-  margin-left: 215px;
-  margin-top: 80px;
-  border-radius: 10px
-}
-
-.opaque-box {
-  background-image: linear-gradient(to bottom, #030305, #040407, transparent);
-  z-index: 10;
-  position: relative;
-}
-
-.btnCar {
-  background-color: transparent !important;
-  border-style: none;
-  color:#9007af !important;
-  margin: 10px;
-}
-
-.btnCar:hover{
-  color:  #cb97d7 !important;
-  font-size: 20px !important;
-}
-
-/* links */
-
-a {
-  color: #9007af !important;
-  font-weight: bold !important;
-}
-
-a:hover {
-  color: #cb97d7 !important;
-}
-
-.btn {
-  background-color: rgba(0,0,0,0.7) !important;
-  border-radius: 10px !important;
-  margin: 5px;
-}
-/* planet parallax*/
-.planet1{
-  background: url("../assets/planet1.png") no-repeat;
-  position: relative;
-  height: 100px;
-  background-size: contain;
-  top: 0;
-  left: 5%;
-}
-.planet2{
-  background: url("../assets/planet2.png") no-repeat;
-  position: relative;
-  height: 150px;
-  background-size: contain;
-  top: 0;
-  left: 80%;
-}
-.planet3{
-  background: url("../assets/planet3.png") no-repeat;
-  position: relative;
-  height: 200px;
-  background-size: contain;
-  top: 0;
-  left: 5%;
-}
-.planet4{
-  background: url("../assets/planet4.png") no-repeat;
-  position: relative;
-  height: 50px;
-  background-size: contain;
-  top: 0;
-  left: 80%;
+  .fa {
+   padding: 10px;
+   border-radius: 50%;
+  }
 }

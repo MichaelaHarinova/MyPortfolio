@@ -8,7 +8,7 @@ const input = Input('ratio');
 export class ParallaxDirective {
   @input parallaxRatio1 = 1;
   initialTop1 = 0;
-  @input parallaxRatio2 = 2;
+  @input parallaxRatio2 = 0.8;
   initialTop2 = 1;
 
   constructor(private planet1: ElementRef, private planet2: ElementRef) {
