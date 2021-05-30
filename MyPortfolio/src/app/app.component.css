@@ -1,18 +1,483 @@
+body {
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  max-width: 100%;
+}
 
-@media screen and (max-width: 900px) and (min-width: 600px), (min-width: 1100px) {
+.bodyBasic {
+  background: rgb(11 26 46);
+  max-width: 100%;
+  max-height: 100%;
+}
 
-  body {
+/* parallax - background */
+.parallax {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3) no-repeat fixed center;
+  background-size: cover;
+}
+
+.universe {
+  background: url('../assets/universe.png') no-repeat;
+  background-size: cover;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+/* header - introduction */
+.blurred-box-1 {
+  position: relative;
+  width: 90%;
+  height: 250px;
+  background: #0000006e;
+  border-radius: 5px;
+  overflow: hidden;
+  color: white;
+  padding: 10px;
+  margin: 20px;
+  font-size: small;
+  backdrop-filter: blur(4px);
+}
+/* main div - parallax surface */
+.surfaceTop {
+  position: sticky;
+  z-index: 4;
+}
+
+.parallaxSurface {
+  width: 100%;
+}
+
+/* carousel */
+.header {
+  color: #9c8696;
+}
+
+/* links carousel */
+a {
+  color: #9007af !important;
+  font-weight: bold !important;
+}
+
+a:hover {
+  color: #cb97d7 !important;
+}
+
+/* form - header */
+.form-box{
+  position: relative;
+}
+
+
+/* form - add review */
+.translucent-box {
+  position: relative;
+  background: #0000006e;
+  border-radius: 5px;
+  overflow: auto;
+  color: white;
+  padding: 20px;
+}
+
+.save {
+  margin-top: 25px !important;
+  margin-bottom: 20px !important;
+}
+
+/* form - cards */
+.card-body {
+  display: inline-block;
+  width: 100%;
+}
+
+.card-deck {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* form - cards */
+
+.content {
+  font-weight: bolder;
+  font-size: 15px;
+  color: white;
+}
+
+.btn {
+  margin: 10px;
+}
+.translucent-box3 {
+  position: relative;
+  background: #0000006e;
+  border-radius: 5px;
+  overflow: auto;
+  color: white;
+  padding: 20px;
+}
+
+.scroll::-webkit-scrollbar {
+  width: 12px;
+}
+.scroll::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.scroll::-webkit-scrollbar-thumb {
+  background-color: rgb(217, 171, 236);
+  border-radius: 50px;
+}
+
+/* footer */
+
+.footerAbs {
+  margin-top: 20px;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+  .planet {
+    background: url('../assets/planet.png') no-repeat;
+    z-index: 2;
+    background-size: cover;
+    position: absolute;
+    width: 200%;
+    height: 145%;
+    left: -87%;
+    top: -20%;
+  }
+
+  .surface {
+    background: url('../assets/surface.png') no-repeat;
+    z-index: 3;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  /* main div - parallax surface */
+  .opaque-box {
+    background-image: linear-gradient(to bottom, #030305 90%, transparent);
+    z-index: 10;
+    position: relative;
+    height: 350px;
+  }
+
+  /* carousel */
+  .text {
     background: rgba(0, 0, 0, 0.8);
-    top: 0;
+    border-radius: 10px;
+    font-size: small;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
     left: 0;
-    max-width: 100%;
+    top: 0;
+
   }
 
-  .bodyBasic {
-    background: rgb(11 26 46);
-    max-width: 100%;
+  img.carousel {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    border-radius: 10px
   }
 
+  .btnCar {
+    background-color: transparent !important;
+    border-style: none;
+    color: #9007af !important;
+    font-size: small;
+  }
+
+  .btnCar:hover {
+    color: #cb97d7 !important;
+    font-size: 10px !important;
+  }
+
+  /* links carousel */
+  .btn {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    border-radius: 10px !important;
+    margin: 5px;
+  }
+
+  /* floating planets - parallax */
+  .planet1 {
+    background: url("../assets/planet1.png") no-repeat;
+    position: relative;
+    height: 130px;
+    width: 130px;
+    background-size: contain;
+    margin-left: 10%;
+    z-index: -1;
+    top: 70%;
+  }
+
+  .planet2 {
+    background: url("../assets/planet2.png") no-repeat;
+    position: relative;
+    height: 100px;
+    width: 100px;
+    background-size: contain;
+    float: right;
+    left: -2%;
+    top: 120%;
+  }
+
+  .planet3 {
+    background: url("../assets/planet3.png") no-repeat;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    background-size: contain;
+    margin-left: 1%;
+    top: 150%;
+    z-index: -2;
+  }
+
+  .planet4 {
+    background: url("../assets/planet4.png") no-repeat;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background-size: contain;
+    float: right;
+    left: -5%;
+    z-index: 4;
+  }
+
+
+  /* form - header */
+  .translucent-box2 {
+    position: relative;
+    background: #0000006e;
+    border-radius: 5px;
+    overflow: hidden;
+    color: white;
+    padding: 20px;
+    width:100%;
+  }
+
+
+  /* form - cards */
+  .card {
+    height: 200px;
+    margin-top: 10px;
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.3) !important;
+    color: white !important;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* footer */
+  footer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    border-top: 2px solid #82425c;
+    margin-top: 20px;
+    background-color: #0000006e;
+    font-size: small;
+  }
+
+  img.ang {
+    width: 20px;
+    margin: 0;
+  }
+
+  /* social media */
+  .fa:hover {
+    /* box-shadow: 0px 1px 8px 0px #ffffff;*/
+    box-shadow: inset 0px 1px 18px 0px #ffffff;
+  }
+
+  .fa {
+    padding: 10px;
+    border-radius: 50%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (min-width: 600px){
+
+  .planet {
+    background: url('../assets/planet.png') no-repeat;
+    z-index: 2;
+    background-size: cover;
+    position: absolute;
+    width: 200%;
+    height: 145%;
+    left: -87%;
+    top: -20%;
+  }
+
+  .surface {
+    background: url('../assets/surface.png') no-repeat;
+    z-index: 3;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  /* main div - parallax surface */
+  .opaque-box {
+    background-image: linear-gradient(to bottom, #030305 90%, transparent);
+    z-index: 10;
+    position: relative;
+    height: 350px;
+  }
+
+  /* carousel */
+  .text {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    font-size: small;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    left: 0;
+    top: 0;
+
+  }
+
+  img.carousel {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    border-radius: 10px
+  }
+
+  .btnCar {
+    background-color: transparent !important;
+    border-style: none;
+    color: #9007af !important;
+    font-size: small;
+  }
+
+  .btnCar:hover {
+    color: #cb97d7 !important;
+    font-size: 10px !important;
+  }
+
+  /* links carousel */
+  .btn {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    border-radius: 10px !important;
+    margin: 5px;
+  }
+
+  /* floating planets - parallax */
+  .planet1 {
+    background: url("../assets/planet1.png") no-repeat;
+    position: relative;
+    height: 130px;
+    width: 130px;
+    background-size: contain;
+    margin-left: 10%;
+    z-index: -1;
+    top: 70%;
+  }
+
+  .planet2 {
+    background: url("../assets/planet2.png") no-repeat;
+    position: relative;
+    height: 100px;
+    width: 100px;
+    background-size: contain;
+    float: right;
+    left: -2%;
+    top: 120%;
+  }
+
+  .planet3 {
+    background: url("../assets/planet3.png") no-repeat;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    background-size: contain;
+    margin-left: 1%;
+    top: 150%;
+    z-index: -2;
+  }
+
+  .planet4 {
+    background: url("../assets/planet4.png") no-repeat;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background-size: contain;
+    float: right;
+    left: -5%;
+    z-index: 4;
+  }
+
+
+  /* form - header */
+  .translucent-box2 {
+    position: relative;
+    background: #0000006e;
+    border-radius: 5px;
+    overflow: hidden;
+    color: white;
+    padding: 20px;
+    width:100%;
+  }
+
+
+  /* form - cards */
+  .card {
+    height: 200px;
+    margin-top: 10px;
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.3) !important;
+    color: white !important;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* footer */
+  footer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    border-top: 2px solid #82425c;
+    margin-top: 20px;
+    background-color: #0000006e;
+    font-size: small;
+  }
+
+  img.ang {
+    width: 20px;
+    margin: 0;
+  }
+
+  /* social media */
+  .fa:hover {
+    /* box-shadow: 0px 1px 8px 0px #ffffff;*/
+    box-shadow: inset 0px 1px 18px 0px #ffffff;
+  }
+
+  .fa {
+    padding: 10px;
+    border-radius: 50%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) and  (min-width: 992px){
 
   /* parallax - background */
   .parallax {
@@ -66,6 +531,7 @@
     color: white;
     padding: 20px;
     margin-top: 150px;
+    backdrop-filter: blur(4px);
   }
 
   .myImg {
@@ -87,7 +553,7 @@
     left: 20%;
   }
 
-/* main div - parallax surface */
+  /* main div - parallax surface */
   .surfaceTop {
     position: sticky;
     z-index: 4;
@@ -104,10 +570,6 @@
   }
 
   /* carousel */
-  .header {
-    color: #9c8696;
-  }
-
   .text {
     background: rgba(0, 0, 0, 0.8);
     margin-bottom: 80px;
@@ -153,38 +615,56 @@
   .planet1 {
     background: url("../assets/planet1.png") no-repeat;
     position: relative;
-    height: 100px;
+    height: 120px;
+    width: 120px;
     background-size: contain;
-    top: 0;
-    left: 5%;
+    margin-left: 10%;
+    z-index: -1;
+    top: 30%;
   }
 
   .planet2 {
     background: url("../assets/planet2.png") no-repeat;
     position: relative;
     height: 150px;
+    width: 150px;
     background-size: contain;
-    top: 0;
-    left: 80%;
+    float: right;
+    left: -2%;
+    top: 100%;
   }
 
   .planet3 {
     background: url("../assets/planet3.png") no-repeat;
     position: relative;
-    height: 200px;
+    height: 300px;
+    width: 300px;
     background-size: contain;
-    top: 0;
-    left: 5%;
+    margin-left: 5%;
+    top: 150%;
+    z-index: -2;
   }
 
   .planet4 {
     background: url("../assets/planet4.png") no-repeat;
     position: relative;
     height: 50px;
+    width: 50px;
     background-size: contain;
-    top: 0;
-    left: 80%;
+    float: right;
+    left: -5%;
     z-index: 4;
+  }
+
+  .planet5 {
+    background: url("../assets/planet4.png") no-repeat;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    background-size: contain;
+    left: -5%;
+    z-index: 4;
+    top: -10%;
   }
 
   /* form - header */
@@ -198,10 +678,11 @@
     overflow: hidden;
     color: white;
     padding: 20px;
+    width:100%;
     top: -50%;
   }
 
-/* form - add review */
+  /* form - add review */
   .translucent-box {
     position: relative;
     background: #0000006e;
@@ -217,15 +698,6 @@
   }
 
   /* form - cards */
-  .card-body {
-    display: inline-block;
-    width: 100%;
-  }
-
-  .card-deck {
-    background: rgba(0, 0, 0, 0.8);
-  }
-
   .group {
     margin-left: 8% !important;
   }
@@ -240,34 +712,6 @@
     width: 380px;
   }
 
-  .content {
-    font-weight: bolder;
-    font-size: 15px;
-    color: white;
-  }
-
-  .btn {
-    margin: 10px;
-  }
-  .translucent-box3 {
-    position: relative;
-    background: #0000006e;
-    border-radius: 5px;
-    overflow: auto;
-    color: white;
-    padding: 20px;
-  }
-
-  .scroll::-webkit-scrollbar {
-    width: 12px;
-  }
-  .scroll::-webkit-scrollbar-track {
-   background-color: rgba(0, 0, 0, 0.6);
-  }
-  .scroll::-webkit-scrollbar-thumb {
-    background-color: rgb(217, 171, 236);
-    border-radius: 50px;
-  }
 
   /* footer */
   footer {
@@ -278,6 +722,7 @@
     color: white;
     border-top: 2px solid #82425c;
     margin-top: 20px;
+    background-color: #0000006e;
   }
 
   img.ang {
@@ -291,12 +736,15 @@
 
   /* social media */
   .fa:hover {
-   /* box-shadow: 0px 1px 8px 0px #ffffff;*/
+    /* box-shadow: 0px 1px 8px 0px #ffffff;*/
     box-shadow: inset 0px 1px 18px 0px #ffffff;
   }
 
   .fa {
-   padding: 10px;
-   border-radius: 50%;
+    padding: 10px;
+    border-radius: 50%;
   }
 }
+
+
+

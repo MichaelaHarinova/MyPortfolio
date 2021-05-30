@@ -72,5 +72,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): any {
     this.getRequest('http://localhost:9001/items').then(res => console.log(this.items));
   }
+
+
 }
 

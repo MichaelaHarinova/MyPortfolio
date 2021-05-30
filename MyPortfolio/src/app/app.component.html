@@ -44,6 +44,7 @@
     <div class="form text-center header">
       <h2> My creation </h2>
     </div>
+
     <div class="container mt-6">
       <ngb-carousel #carousel>
         <ng-template ngbSlide>
@@ -127,10 +128,11 @@
     </div>
 
     <!-- floating planets -->
-    <div appParallax class="planet1" id="planet1"></div>
+    <div appParallax [factor]="7" class="planet1" id="planet1"></div>
     <div class="planet4" id="planet4"></div>
-    <div appParallax class="planet2" id="planet2"></div>
-    <div appParallax class="planet3" id="planet3"></div>
+    <div appParallax [factor]="7" class="planet2" id="planet2"></div>
+    <div appParallax [factor]="13" class="planet3" id="planet3"></div>
+    <div appParallax [factor]="5" class="planet5" id="planet5"></div>
   </div>
   <div class="form-box">
     <!-- Reviews from people -->
@@ -192,7 +194,7 @@
   </div>
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center footerAbs">
+  <div class="footer-copyright text-center footerAbs translucent-box3">
     <div>
       <a href="https://www.linkedin.com/in/michaela-hari%C5%88ov%C3%A1-a0a7131b8/"
          class="fa">
