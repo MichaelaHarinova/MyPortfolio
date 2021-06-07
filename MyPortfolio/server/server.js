@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const cors = require('cors');
+const path = require("path");
 // set port, listen for requests
 const PORT = 9001;
 
@@ -36,3 +37,11 @@ app.post('/addItem', function (request, response) {
 });
 console.log(items);
 app.listen(PORT, function () {});
+
+app.use(express.static(__dirname+'/dist'));
+app.get("/", function(req,res){
+  res.sendFile(path.join(__dirname+'/dist/index.html'))
+});
+app.listen(process.env.PORT || 3000, function(){
+  console.log("listening on http://localhost:3000")
+})

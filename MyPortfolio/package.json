@@ -2,8 +2,9 @@
   "name": "my-portfolio",
   "version": "0.0.0",
   "scripts": {
+    "heroku-postbuild": "ng postbuild --prod",
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
