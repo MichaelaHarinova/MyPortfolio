@@ -30,20 +30,7 @@ body {
   width: 100%;
   height: 100%;
 }
-/* header - introduction */
-.blurred-box-1 {
-  position: relative;
-  width: 90%;
-  height: 250px;
-  background: #0000006e;
-  border-radius: 5px;
-  overflow: hidden;
-  color: white;
-  padding: 10px;
-  margin: 20px;
-  font-size: small;
-  backdrop-filter: blur(4px);
-}
+
 /* main div - parallax surface */
 .surfaceTop {
   position: sticky;
@@ -57,6 +44,7 @@ body {
 /* carousel */
 .header {
   color: #9c8696;
+  margin-bottom: 6rem;
 }
 
 /* links carousel */
@@ -70,7 +58,7 @@ a:hover {
 }
 
 /* form - header */
-.form-box{
+.form-box {
   position: relative;
 }
 
@@ -111,6 +99,7 @@ a:hover {
 .btn {
   margin: 10px;
 }
+
 .translucent-box3 {
   position: relative;
   background: #0000006e;
@@ -123,9 +112,11 @@ a:hover {
 .scroll::-webkit-scrollbar {
   width: 12px;
 }
+
 .scroll::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0.6);
 }
+
 .scroll::-webkit-scrollbar-thumb {
   background-color: rgb(217, 171, 236);
   border-radius: 50px;
@@ -138,8 +129,22 @@ a:hover {
 }
 
 
-/* Extra small devices (phones, 600px and down) */
+/*                           Extra small devices (phones, 600px and down)                  */
 @media only screen and (max-width: 600px) {
+  .blurred-box-1 {
+    position: relative;
+    width: 90%;
+    height: 250px;
+    background: #0000006e;
+    border-radius: 5px;
+    overflow: hidden;
+    color: white;
+    padding: 10px;
+    margin: auto;
+    margin-top:20px;
+    font-size: small;
+    backdrop-filter: blur(4px);
+  }
 
   .planet {
     background: url('../assets/planet.png') no-repeat;
@@ -166,7 +171,7 @@ a:hover {
     background-image: linear-gradient(to bottom, #030305 90%, transparent);
     z-index: 10;
     position: relative;
-    height: 350px;
+    height: 450px;
   }
 
   /* carousel */
@@ -194,6 +199,7 @@ a:hover {
     border-style: none;
     color: #9007af !important;
     font-size: small;
+    margin-top: 100px !important;
   }
 
   .btnCar:hover {
@@ -262,7 +268,7 @@ a:hover {
     overflow: hidden;
     color: white;
     padding: 20px;
-    width:100%;
+    width: 100%;
   }
 
 
@@ -281,7 +287,6 @@ a:hover {
   footer {
     position: absolute;
     width: 100%;
-    height: 100%;
     color: white;
     border-top: 2px solid #82425c;
     margin-top: 20px;
@@ -306,9 +311,21 @@ a:hover {
   }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (min-width: 600px){
+/*                      Small devices (portrait tablets and large phones, 600px and up)                     */
+@media only screen  and (min-width: 600px) {
+  .blurred-box-1 {
+    position: relative;
+    width: 50%;
+    height: 250px;
+    left: 25%;
+    background: #0000006e;
+    border-radius: 5px;
+    overflow: hidden;
+    color: white;
+    padding: 20px;
+    margin-top: 150px;
+    backdrop-filter: blur(4px);
+  }
 
   .planet {
     background: url('../assets/planet.png') no-repeat;
@@ -363,6 +380,7 @@ a:hover {
     border-style: none;
     color: #9007af !important;
     font-size: small;
+    margin-top: 80px !important;
   }
 
   .btnCar:hover {
@@ -431,7 +449,7 @@ a:hover {
     overflow: hidden;
     color: white;
     padding: 20px;
-    width:100%;
+    width: 100%;
   }
 
 
@@ -450,7 +468,186 @@ a:hover {
   footer {
     position: absolute;
     width: 100%;
+    color: white;
+    border-top: 2px solid #82425c;
+    margin-top: 20px;
+    background-color: #0000006e;
+    font-size: small;
+  }
+
+  img.ang {
+    width: 20px;
+    margin: 0;
+  }
+
+  /* social media */
+  .fa:hover {
+    /* box-shadow: 0px 1px 8px 0px #ffffff;*/
+    box-shadow: inset 0px 1px 18px 0px #ffffff;
+  }
+
+  .fa {
+    padding: 10px;
+    border-radius: 50%;
+  }
+}
+  /*                      Medium devices (landscape tablets, 768px and up)                 */
+@media only screen and (min-width: 768px) {
+  .blurred-box-1 {
+    position: relative;
+    width: 50%;
+    height: 250px;
+    left: 25%;
+    background: #0000006e;
+    border-radius: 5px;
+    overflow: hidden;
+    color: white;
+    padding: 20px;
+    margin-top: 150px;
+    backdrop-filter: blur(4px);
+  }
+
+  .planet {
+    background: url('../assets/planet.png') no-repeat;
+    z-index: 2;
+    background-size: cover;
+    position: absolute;
+    width: 200%;
+    height: 145%;
+    left: -87%;
+    top: -20%;
+  }
+
+  .surface {
+    background: url('../assets/surface.png') no-repeat;
+    z-index: 3;
+    background-size: cover;
+    width: 100%;
     height: 100%;
+    position: relative;
+  }
+
+  /* main div - parallax surface */
+  .opaque-box {
+    background-image: linear-gradient(to bottom, #030305 90%, transparent);
+    z-index: 10;
+    position: relative;
+    height: 350px;
+  }
+
+  /* carousel */
+  .text {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    font-size: small;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    left: 0;
+    top: 0;
+
+  }
+
+  img.carousel {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    border-radius: 10px
+  }
+
+  .btnCar {
+    background-color: transparent !important;
+    border-style: none;
+    color: #9007af !important;
+    font-size: small;
+    margin-top: 80px !important;
+  }
+
+  .btnCar:hover {
+    color: #cb97d7 !important;
+    font-size: 10px !important;
+  }
+
+  /* links carousel */
+  .btn {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    border-radius: 10px !important;
+    margin: 5px;
+  }
+
+  /* floating planets - parallax */
+  .planet1 {
+    background: url("../assets/planet1.png") no-repeat;
+    position: relative;
+    height: 130px;
+    width: 130px;
+    background-size: contain;
+    margin-left: 10%;
+    z-index: -1;
+    top: 70%;
+  }
+
+  .planet2 {
+    background: url("../assets/planet2.png") no-repeat;
+    position: relative;
+    height: 100px;
+    width: 100px;
+    background-size: contain;
+    float: right;
+    left: -2%;
+    top: 120%;
+  }
+
+  .planet3 {
+    background: url("../assets/planet3.png") no-repeat;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    background-size: contain;
+    margin-left: 1%;
+    top: 150%;
+    z-index: -2;
+  }
+
+  .planet4 {
+    background: url("../assets/planet4.png") no-repeat;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background-size: contain;
+    float: right;
+    left: -5%;
+    z-index: 4;
+  }
+
+
+  /* form - header */
+  .translucent-box2 {
+    position: relative;
+    background: #0000006e;
+    border-radius: 5px;
+    overflow: hidden;
+    color: white;
+    padding: 20px;
+    width: 100%;
+  }
+
+
+  /* form - cards */
+  .card {
+    height: 200px;
+    margin-top: 10px;
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.3) !important;
+    color: white !important;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* footer */
+  footer {
+    position: absolute;
+    width: 100%;
     color: white;
     border-top: 2px solid #82425c;
     margin-top: 20px;
@@ -476,8 +673,8 @@ a:hover {
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) and  (min-width: 992px){
+/*                      Extra large devices (large laptops and desktops, 1200px and up)                     */
+@media only screen and (min-width: 1200px) and  (min-width: 992px) {
 
   /* parallax - background */
   .parallax {
@@ -562,47 +759,45 @@ a:hover {
   .parallaxSurface {
     width: 100%;
   }
+
   .opaque-box {
     background-image: linear-gradient(to bottom, #030305, #040407, transparent);
     z-index: 10;
     position: relative;
-    height: 700px;
+    height: 750px;
   }
 
   /* carousel */
   .text {
     background: rgba(0, 0, 0, 0.8);
     margin-bottom: 80px;
-    border-radius: 10px
+    border-radius: 10px;
+    z-index: 7;
+    font-size: large;
+  }
+
+  .description {
+    margin-top: 50px;
   }
 
   img.carousel {
-    width: 60%;
-    height: 330px;
-    margin-left: 215px;
-    margin-top: 80px;
-    border-radius: 10px
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    z-index: 6;
   }
 
   .btnCar {
-    background-color: transparent !important;
-    border-style: none;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    border-radius: 10px !important;
     color: #9007af !important;
-    margin: 10px;
+    margin-top: 180px !important;
+    font-size: 38px !important;
   }
 
   .btnCar:hover {
     color: #cb97d7 !important;
-    font-size: 20px !important;
-  }
-  /* links carousel */
-  a {
-    color: #9007af !important;
-    font-weight: bold !important;
-  }
-
-  a:hover {
-    color: #cb97d7 !important;
+    font-size: 40px !important;
   }
 
   .btn {
@@ -619,7 +814,7 @@ a:hover {
     width: 120px;
     background-size: contain;
     margin-left: 10%;
-    z-index: -1;
+    z-index: 8;
     top: 30%;
   }
 
@@ -632,6 +827,7 @@ a:hover {
     float: right;
     left: -2%;
     top: 100%;
+    z-index: 9;
   }
 
   .planet3 {
@@ -642,7 +838,7 @@ a:hover {
     background-size: contain;
     margin-left: 5%;
     top: 150%;
-    z-index: -2;
+    z-index: 9;
   }
 
   .planet4 {
@@ -653,7 +849,7 @@ a:hover {
     background-size: contain;
     float: right;
     left: -5%;
-    z-index: 4;
+    z-index: 10;
   }
 
   .planet5 {
@@ -663,14 +859,15 @@ a:hover {
     width: 200px;
     background-size: contain;
     left: -5%;
-    z-index: 4;
+    z-index: 11;
     top: -10%;
   }
 
   /* form - header */
-  .form-box{
+  .form-box {
     position: relative;
   }
+
   .translucent-box2 {
     position: relative;
     background: #0000006e;
@@ -678,7 +875,7 @@ a:hover {
     overflow: hidden;
     color: white;
     padding: 20px;
-    width:100%;
+    width: 100%;
     top: -50%;
   }
 
